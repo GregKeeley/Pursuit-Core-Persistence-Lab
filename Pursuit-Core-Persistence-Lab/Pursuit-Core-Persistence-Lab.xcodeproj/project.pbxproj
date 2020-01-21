@@ -14,6 +14,8 @@
 		C18EB95423D7A8A1006F08DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18EB95323D7A8A1006F08DF /* Assets.xcassets */; };
 		C18EB95723D7A8A1006F08DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */; };
 		C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */; };
+		C18EB96423D7AA1F006F08DF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96323D7AA1F006F08DF /* DetailViewController.swift */; };
+		C18EB96623D7AA40006F08DF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96523D7AA40006F08DF /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C18EB95623D7A8A1006F08DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C18EB95823D7A8A1006F08DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAPI.swift; sourceTree = "<group>"; };
+		C18EB96323D7AA1F006F08DF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C18EB96523D7AA40006F08DF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,12 @@
 		C18EB94923D7A89F006F08DF /* Pursuit-Core-Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				C18EB94A23D7A89F006F08DF /* AppDelegate.swift */,
-				C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */,
-				C18EB94E23D7A89F006F08DF /* ViewController.swift */,
-				C18EB95E23D7A8E8006F08DF /* Secrets */,
 				C18EB95023D7A89F006F08DF /* Main.storyboard */,
+				C18EB96223D7A9B7006F08DF /* Controllers */,
 				C18EB95323D7A8A1006F08DF /* Assets.xcassets */,
 				C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */,
+				C18EB96123D7A999006F08DF /* Supporting Files */,
+				C18EB95E23D7A8E8006F08DF /* Secrets */,
 				C18EB95823D7A8A1006F08DF /* Info.plist */,
 			);
 			path = "Pursuit-Core-Persistence-Lab";
@@ -76,6 +79,25 @@
 				C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */,
 			);
 			path = Secrets;
+			sourceTree = "<group>";
+		};
+		C18EB96123D7A999006F08DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C18EB94A23D7A89F006F08DF /* AppDelegate.swift */,
+				C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C18EB96223D7A9B7006F08DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C18EB94E23D7A89F006F08DF /* ViewController.swift */,
+				C18EB96323D7AA1F006F08DF /* DetailViewController.swift */,
+				C18EB96523D7AA40006F08DF /* FavoritesViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +173,9 @@
 			files = (
 				C18EB94F23D7A89F006F08DF /* ViewController.swift in Sources */,
 				C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */,
+				C18EB96423D7AA1F006F08DF /* DetailViewController.swift in Sources */,
 				C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */,
+				C18EB96623D7AA40006F08DF /* FavoritesViewController.swift in Sources */,
 				C18EB94D23D7A89F006F08DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
