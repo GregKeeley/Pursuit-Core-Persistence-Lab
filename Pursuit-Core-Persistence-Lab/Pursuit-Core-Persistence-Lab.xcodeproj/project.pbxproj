@@ -13,6 +13,7 @@
 		C18EB95223D7A89F006F08DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18EB95023D7A89F006F08DF /* Main.storyboard */; };
 		C18EB95423D7A8A1006F08DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18EB95323D7A8A1006F08DF /* Assets.xcassets */; };
 		C18EB95723D7A8A1006F08DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */; };
+		C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C18EB95323D7A8A1006F08DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C18EB95623D7A8A1006F08DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C18EB95823D7A8A1006F08DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +61,21 @@
 				C18EB94A23D7A89F006F08DF /* AppDelegate.swift */,
 				C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */,
 				C18EB94E23D7A89F006F08DF /* ViewController.swift */,
+				C18EB95E23D7A8E8006F08DF /* Secrets */,
 				C18EB95023D7A89F006F08DF /* Main.storyboard */,
 				C18EB95323D7A8A1006F08DF /* Assets.xcassets */,
 				C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */,
 				C18EB95823D7A8A1006F08DF /* Info.plist */,
 			);
 			path = "Pursuit-Core-Persistence-Lab";
+			sourceTree = "<group>";
+		};
+		C18EB95E23D7A8E8006F08DF /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				C18EB94F23D7A89F006F08DF /* ViewController.swift in Sources */,
 				C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */,
+				C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */,
 				C18EB94D23D7A89F006F08DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
