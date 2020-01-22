@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     
     var imageResults: [Hit]? {
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
         loadSearchResults(searchQuery: "budgerigar")
         collectionView.dataSource = self
         collectionView.delegate = self
-       
+        searchBar.layer.cornerRadius = 4
     }
 
     private func loadSearchResults(searchQuery: String) {
@@ -49,16 +51,11 @@ extension ViewController: UICollectionViewDelegate {
 }
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interItemSpacing: CGFloat = 10
-        let maxWidth = UIScreen.main.bounds.width
-        let numberOfItems: CGFloat = 3
-        let totalSpacing: CGFloat = numberOfItems * interItemSpacing
-        let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
-        
-        return CGSize(width: itemWidth, height: itemWidth)
+        let squareSize = (collectionView.frame.size.width * 0.95)
+        return CGSize(width: squareSize, height: squareSize)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
     }
 }
 extension ViewController: UICollectionViewDataSource {
@@ -71,9 +68,17 @@ extension ViewController: UICollectionViewDataSource {
             fatalError("Failed to dequeue imageCell")
         }
         let hit = imageResults?[indexPath.row]
+        cell.layer.cornerRadius = 4
         cell.configureCell(for: hit)
         return cell
     }
-    
-    
+}
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchText = searchBar.text
+        guard !searchText!.isEmpty else {
+            imageResults = loadSearchResults(searchQuery: "squirrel")
+        }
+        imageResults = loadSearchResults(searchQuery: searchText ?? "squirrel")
+    }
 }

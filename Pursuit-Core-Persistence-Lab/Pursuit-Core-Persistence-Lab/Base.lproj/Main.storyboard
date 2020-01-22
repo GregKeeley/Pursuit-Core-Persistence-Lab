@@ -23,7 +23,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RPg-KR-Ajd">
                                 <rect key="frame" x="0.0" y="100" width="414" height="776"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vq6-dS-TUZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vq6-dS-TUZ">
                                     <size key="itemSize" width="189" height="177"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -31,24 +31,20 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="5ej-FU-Bwj" customClass="ImageCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
-                                        <rect key="frame" x="7" y="0.0" width="400" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="177"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fdB-w4-6sd">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xww-El-w51">
+                                            <rect key="frame" x="0.0" y="0.0" width="189" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQy-Ny-ujg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="400" id="7pQ-7b-Wbo"/>
-                                                        <constraint firstAttribute="width" constant="400" id="Z8m-zH-j8T"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="177"/>
                                                 </imageView>
                                                 <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-gV-lQT">
-                                                    <rect key="frame" x="0.0" y="298" width="400" height="102"/>
+                                                    <rect key="frame" x="0.0" y="155" width="189" height="22"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-K3-shL">
-                                                            <rect key="frame" x="8" y="0.0" width="384" height="101"/>
+                                                            <rect key="frame" x="8" y="0.0" width="173" height="21"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Squirrel">
                                                                     <attributes>
@@ -69,22 +65,30 @@
                                                         <constraint firstAttribute="trailing" secondItem="dWa-K3-shL" secondAttribute="trailing" constant="8" id="xUc-Kd-dSE"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hvK-y6-X3C">
+                                                    <rect key="frame" x="146" y="8.5" width="35" height="36.5"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="OQy-Ny-ujg" secondAttribute="trailing" id="0q5-Lq-E8b"/>
                                                 <constraint firstAttribute="trailing" secondItem="MBn-gV-lQT" secondAttribute="trailing" id="0xP-wF-coO"/>
-                                                <constraint firstItem="OQy-Ny-ujg" firstAttribute="top" secondItem="fdB-w4-6sd" secondAttribute="top" id="1WI-Ic-I8s"/>
+                                                <constraint firstItem="OQy-Ny-ujg" firstAttribute="top" secondItem="Xww-El-w51" secondAttribute="top" id="1WI-Ic-I8s"/>
+                                                <constraint firstItem="hvK-y6-X3C" firstAttribute="height" secondItem="OQy-Ny-ujg" secondAttribute="height" multiplier="0.2" constant="2.1000000000000014" id="3qk-bg-5fK"/>
                                                 <constraint firstAttribute="bottom" secondItem="MBn-gV-lQT" secondAttribute="bottom" id="4rR-Nf-Z8z"/>
-                                                <constraint firstItem="MBn-gV-lQT" firstAttribute="height" secondItem="OQy-Ny-ujg" secondAttribute="height" multiplier="0.206215" constant="19.5" id="9Dw-S0-Y28"/>
+                                                <constraint firstItem="hvK-y6-X3C" firstAttribute="width" secondItem="OQy-Ny-ujg" secondAttribute="width" multiplier="0.2" constant="-2.8000000000000043" id="FEe-gw-ERw"/>
                                                 <constraint firstAttribute="bottom" secondItem="OQy-Ny-ujg" secondAttribute="bottom" id="LOH-AA-iAW"/>
-                                                <constraint firstItem="MBn-gV-lQT" firstAttribute="leading" secondItem="fdB-w4-6sd" secondAttribute="leading" id="W7r-re-soX"/>
-                                                <constraint firstItem="OQy-Ny-ujg" firstAttribute="leading" secondItem="fdB-w4-6sd" secondAttribute="leading" id="hGn-zR-V9c"/>
+                                                <constraint firstAttribute="trailing" secondItem="hvK-y6-X3C" secondAttribute="trailing" constant="8" id="PjT-3g-lE6"/>
+                                                <constraint firstItem="MBn-gV-lQT" firstAttribute="leading" secondItem="Xww-El-w51" secondAttribute="leading" id="W7r-re-soX"/>
+                                                <constraint firstItem="OQy-Ny-ujg" firstAttribute="leading" secondItem="Xww-El-w51" secondAttribute="leading" id="hGn-zR-V9c"/>
+                                                <constraint firstItem="hvK-y6-X3C" firstAttribute="top" secondItem="Xww-El-w51" secondAttribute="top" constant="8" id="sxf-Ry-HCa"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="400" height="400"/>
+                                        <size key="customSize" width="189" height="177"/>
                                         <connections>
                                             <outlet property="imageLabel" destination="dWa-K3-shL" id="edT-r9-NDV"/>
                                             <outlet property="imageView" destination="OQy-Ny-ujg" id="aA0-bG-JaL"/>
+                                            <outlet property="userImageView" destination="hvK-y6-X3C" id="mkG-Wv-kQb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -104,6 +108,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="RPg-KR-Ajd" id="86B-lU-Oy6"/>
+                        <outlet property="searchBar" destination="2LB-A4-6XS" id="XZW-SB-pl9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,4 +116,7 @@
             <point key="canvasLocation" x="192.75362318840581" y="-1.3392857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

@@ -12,10 +12,11 @@ import ImageKit
 class ImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
     
     func configureCell(for image: Hit?) {
-        imageLabel.text = image?.user
-        imageView.getImage(with: image?.largeImageURL ?? "https://cdn.pixabay.com/photo/2016/03/27/17/12/water-1283152_150.jpg") { [weak self] (results) in
+        imageLabel.text = image?.tags
+        imageView.getImage(with: image?.webformatURL ?? "https://cdn.pixabay.com/photo/2016/03/27/17/12/water-1283152_150.jpg") { [weak self] (results) in
             switch results {
             case .failure(let appError):
                 DispatchQueue.main.async {
@@ -25,6 +26,24 @@ class ImageCell: UICollectionViewCell {
             case .success(let image):
                 DispatchQueue.main.async {
                     self?.imageView.image = image
+                }
+                
+            }
+        }
+        userImageView.layer.borderColor = UIColor.white.cgColor
+        userImageView.layer.borderWidth = 0.5
+        
+        userImageView.layer.cornerRadius = (userImageView.frame.size.width)
+        userImageView.getImage(with: image?.userImageURL ?? "https://cdn.pixabay.com/user/2016/03/26/22-06-36-459_250x250.jpg") { [weak self] (results) in
+            switch results {
+            case .failure(let appError):
+                DispatchQueue.main.async {
+                    self?.userImageView.image = UIImage(systemName: "xmark.circle")
+                }
+                print("Failed to load image: \(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.userImageView.image = image
                 }
             }
         }
