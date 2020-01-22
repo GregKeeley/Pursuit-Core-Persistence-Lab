@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */; };
 		C18EB96423D7AA1F006F08DF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96323D7AA1F006F08DF /* DetailViewController.swift */; };
 		C18EB96623D7AA40006F08DF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96523D7AA40006F08DF /* FavoritesViewController.swift */; };
+		C18EB96923D7E9C5006F08DF /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C18EB96823D7E9C5006F08DF /* ImageKit */; };
+		C18EB96C23D7EA0F006F08DF /* PixaBayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96B23D7EA0F006F08DF /* PixaBayAPI.swift */; };
+		C18EB96F23D7EAAA006F08DF /* PixaBayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		C18EB95F23D7A8FA006F08DF /* SecretAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAPI.swift; sourceTree = "<group>"; };
 		C18EB96323D7AA1F006F08DF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C18EB96523D7AA40006F08DF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		C18EB96B23D7EA0F006F08DF /* PixaBayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBayAPI.swift; sourceTree = "<group>"; };
+		C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBayModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18EB96923D7E9C5006F08DF /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				C18EB96223D7A9B7006F08DF /* Controllers */,
 				C18EB95323D7A8A1006F08DF /* Assets.xcassets */,
 				C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */,
+				C18EB96D23D7EA87006F08DF /* Models */,
+				C18EB96A23D7E9D9006F08DF /* Network Files */,
 				C18EB96123D7A999006F08DF /* Supporting Files */,
 				C18EB95E23D7A8E8006F08DF /* Secrets */,
 				C18EB95823D7A8A1006F08DF /* Info.plist */,
@@ -100,6 +108,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		C18EB96A23D7E9D9006F08DF /* Network Files */ = {
+			isa = PBXGroup;
+			children = (
+				C18EB96B23D7EA0F006F08DF /* PixaBayAPI.swift */,
+			);
+			path = "Network Files";
+			sourceTree = "<group>";
+		};
+		C18EB96D23D7EA87006F08DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +140,9 @@
 			dependencies = (
 			);
 			name = "Pursuit-Core-Persistence-Lab";
+			packageProductDependencies = (
+				C18EB96823D7E9C5006F08DF /* ImageKit */,
+			);
 			productName = "Pursuit-Core-Persistence-Lab";
 			productReference = C18EB94723D7A89F006F08DF /* Pursuit-Core-Persistence-Lab.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +171,9 @@
 				Base,
 			);
 			mainGroup = C18EB93E23D7A89F006F08DF;
+			packageReferences = (
+				C18EB96723D7E9C5006F08DF /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = C18EB94823D7A89F006F08DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,6 +205,8 @@
 				C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */,
 				C18EB96423D7AA1F006F08DF /* DetailViewController.swift in Sources */,
 				C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */,
+				C18EB96F23D7EAAA006F08DF /* PixaBayModel.swift in Sources */,
+				C18EB96C23D7EA0F006F08DF /* PixaBayAPI.swift in Sources */,
 				C18EB96623D7AA40006F08DF /* FavoritesViewController.swift in Sources */,
 				C18EB94D23D7A89F006F08DF /* SceneDelegate.swift in Sources */,
 			);
@@ -374,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C18EB96723D7E9C5006F08DF /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C18EB96823D7E9C5006F08DF /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C18EB96723D7E9C5006F08DF /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C18EB93F23D7A89F006F08DF /* Project object */;
 }
