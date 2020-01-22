@@ -30,21 +30,25 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5ej-FU-Bwj" customClass="ImageCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="189" height="177"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="5ej-FU-Bwj" customClass="ImageCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="0.0" width="400" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fdB-w4-6sd">
-                                            <rect key="frame" x="0.0" y="0.0" width="189" height="177"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQy-Ny-ujg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="177"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQy-Ny-ujg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="400" id="7pQ-7b-Wbo"/>
+                                                        <constraint firstAttribute="width" constant="400" id="Z8m-zH-j8T"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-gV-lQT">
-                                                    <rect key="frame" x="0.0" y="121" width="189" height="56"/>
+                                                    <rect key="frame" x="0.0" y="298" width="400" height="102"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-K3-shL">
-                                                            <rect key="frame" x="8" y="0.0" width="173" height="55"/>
+                                                            <rect key="frame" x="8" y="0.0" width="384" height="101"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Squirrel">
                                                                     <attributes>
@@ -77,7 +81,7 @@
                                                 <constraint firstItem="OQy-Ny-ujg" firstAttribute="leading" secondItem="fdB-w4-6sd" secondAttribute="leading" id="hGn-zR-V9c"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="189" height="177"/>
+                                        <size key="customSize" width="400" height="400"/>
                                         <connections>
                                             <outlet property="imageLabel" destination="dWa-K3-shL" id="edT-r9-NDV"/>
                                             <outlet property="imageView" destination="OQy-Ny-ujg" id="aA0-bG-JaL"/>
