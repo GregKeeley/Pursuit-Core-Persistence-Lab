@@ -36,7 +36,6 @@ class ImageCell: UICollectionViewCell {
                 
             }
         }
-
         userImageView.getImage(with: image?.userImageURL ?? "https://cdn.pixabay.com/user/2016/03/26/22-06-36-459_250x250.jpg") { [weak self] (results) in
             switch results {
             case .failure(let appError):

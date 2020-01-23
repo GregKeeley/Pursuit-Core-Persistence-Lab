@@ -44,7 +44,14 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController,
+            let indexPath = collectionView.indexPathsForSelectedItems?.first
+        else {
+            fatalError("Failed to prepare for segue to detailVC")
+        }
+        detailVC.imageData = imageResults![indexPath.row]
+    }
 }
 extension ViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

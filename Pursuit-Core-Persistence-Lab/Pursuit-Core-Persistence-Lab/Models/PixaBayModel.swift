@@ -36,5 +36,4 @@ struct Hit: Codable {
     let previewWidth: Int
     let userImageURL: String
     let previewURL: String
-
 }
