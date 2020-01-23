@@ -36,28 +36,5 @@ struct Hit: Codable {
     let previewWidth: Int
     let userImageURL: String
     let previewURL: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case largeImageURL
-//        case webformatHeight
-//        case webformatWidth
-//        case likes
-//        case imageWidth
-//        case id
-//        case userId = "user_id"
-//        case views
-//        case comments
-//        case pageURL
-//        case imageHeight
-//        case webformatURL
-//        case previewHeight
-//        case tags
-//        case downloads
-//        case user
-//        case favorites
-//        case imageSize
-//        case previewWidth
-//        case userImageURL
-//        case previewURL
-//    }
+
 }

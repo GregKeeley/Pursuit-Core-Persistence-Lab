@@ -28,7 +28,9 @@ class ViewController: UIViewController {
         loadSearchResults(searchQuery: "budgerigar")
         collectionView.dataSource = self
         collectionView.delegate = self
-        searchBar.layer.cornerRadius = 4
+        searchBar.delegate = self
+        searchBar.layer.cornerRadius = 20
+        
     }
 
     private func loadSearchResults(searchQuery: String) {
@@ -77,8 +79,21 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchText = searchBar.text
         guard !searchText!.isEmpty else {
-            imageResults = loadSearchResults(searchQuery: "squirrel")
-        }
-        imageResults = loadSearchResults(searchQuery: searchText ?? "squirrel")
+            loadSearchResults(searchQuery: "squirrel")
+            searchBar.resignFirstResponder()
+            print("searchText empty")
+            return
+                }
+        loadSearchResults(searchQuery: searchText ?? "squirrel")
+      
+        searchBar.resignFirstResponder()
+        return
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
     }
 }

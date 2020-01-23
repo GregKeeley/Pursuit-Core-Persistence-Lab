@@ -70,10 +70,10 @@
 		C18EB94923D7A89F006F08DF /* Pursuit-Core-Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				C18EB95023D7A89F006F08DF /* Main.storyboard */,
-				C18EB96223D7A9B7006F08DF /* Controllers */,
 				C18EB95323D7A8A1006F08DF /* Assets.xcassets */,
 				C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */,
+				C18EB95023D7A89F006F08DF /* Main.storyboard */,
+				C18EB96223D7A9B7006F08DF /* Controllers */,
 				C18EB96D23D7EA87006F08DF /* Models */,
 				C18EB96A23D7E9D9006F08DF /* Network Files */,
 				C18EB96123D7A999006F08DF /* Supporting Files */,

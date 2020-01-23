@@ -13,7 +13,13 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
-    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        userImageView.layer.borderColor = UIColor.white.cgColor
+        userImageView.layer.borderWidth = 0.5
+        userImageView.layer.cornerRadius = (userImageView.frame.size.width / 2)
+        imageView.layer.cornerRadius = 8
+    }
     func configureCell(for image: Hit?) {
         imageLabel.text = image?.tags
         imageView.getImage(with: image?.webformatURL ?? "https://cdn.pixabay.com/photo/2016/03/27/17/12/water-1283152_150.jpg") { [weak self] (results) in
@@ -30,10 +36,7 @@ class ImageCell: UICollectionViewCell {
                 
             }
         }
-        userImageView.layer.borderColor = UIColor.white.cgColor
-        userImageView.layer.borderWidth = 0.5
-        
-        userImageView.layer.cornerRadius = (userImageView.frame.size.width)
+
         userImageView.getImage(with: image?.userImageURL ?? "https://cdn.pixabay.com/user/2016/03/26/22-06-36-459_250x250.jpg") { [weak self] (results) in
             switch results {
             case .failure(let appError):
