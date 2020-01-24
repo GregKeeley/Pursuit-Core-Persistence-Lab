@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C110453423DA7933000A4304 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C110453323DA7933000A4304 /* PersistenceHelper.swift */; };
+		C110453623DA7955000A4304 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C110453523DA7955000A4304 /* FileManager+Extensions.swift */; };
 		C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB94A23D7A89F006F08DF /* AppDelegate.swift */; };
 		C18EB94D23D7A89F006F08DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */; };
 		C18EB94F23D7A89F006F08DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB94E23D7A89F006F08DF /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C110453323DA7933000A4304 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		C110453523DA7955000A4304 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		C18EB94723D7A89F006F08DF /* Pursuit-Core-Persistence-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-Persistence-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18EB94A23D7A89F006F08DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C110453723DA7B28000A4304 /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				C110453523DA7955000A4304 /* FileManager+Extensions.swift */,
+				C110453323DA7933000A4304 /* PersistenceHelper.swift */,
+			);
+			path = "Data Persistence";
+			sourceTree = "<group>";
+		};
 		C18EB93E23D7A89F006F08DF = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 				C18EB95323D7A8A1006F08DF /* Assets.xcassets */,
 				C18EB95523D7A8A1006F08DF /* LaunchScreen.storyboard */,
 				C18EB95023D7A89F006F08DF /* Main.storyboard */,
+				C110453723DA7B28000A4304 /* Data Persistence */,
 				C18EB96223D7A9B7006F08DF /* Controllers */,
 				C18EB96D23D7EA87006F08DF /* Models */,
 				C18EB96A23D7E9D9006F08DF /* Network Files */,
@@ -207,6 +221,8 @@
 				C18EB94F23D7A89F006F08DF /* ViewController.swift in Sources */,
 				C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */,
 				C18EB97123D8EA77006F08DF /* ImageCell.swift in Sources */,
+				C110453623DA7955000A4304 /* FileManager+Extensions.swift in Sources */,
+				C110453423DA7933000A4304 /* PersistenceHelper.swift in Sources */,
 				C18EB96423D7AA1F006F08DF /* DetailViewController.swift in Sources */,
 				C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */,
 				C18EB96F23D7EAAA006F08DF /* PixaBayModel.swift in Sources */,
