@@ -18,7 +18,7 @@ enum DataPersistenceError: Error {
 
 class PerssistenceHelper {
     private static var images = [Hit]()
-    private static let filename = "schedules.plist"
+    private static let filename = "images.plist"
     
     private static func save() throws {
         let url = FileManager.pathToDocumentsDirectory(with: filename)

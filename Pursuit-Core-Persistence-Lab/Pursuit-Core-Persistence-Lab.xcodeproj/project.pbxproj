@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C110453423DA7933000A4304 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C110453323DA7933000A4304 /* PersistenceHelper.swift */; };
 		C110453623DA7955000A4304 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C110453523DA7955000A4304 /* FileManager+Extensions.swift */; };
+		C13662DD23DA8034003BC27D /* FavImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13662DC23DA8034003BC27D /* FavImageCell.swift */; };
 		C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB94A23D7A89F006F08DF /* AppDelegate.swift */; };
 		C18EB94D23D7A89F006F08DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */; };
 		C18EB94F23D7A89F006F08DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB94E23D7A89F006F08DF /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		C110453323DA7933000A4304 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		C110453523DA7955000A4304 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		C13662DC23DA8034003BC27D /* FavImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavImageCell.swift; sourceTree = "<group>"; };
 		C18EB94723D7A89F006F08DF /* Pursuit-Core-Persistence-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-Persistence-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18EB94A23D7A89F006F08DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C18EB94C23D7A89F006F08DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */,
 				C18EB97023D8EA77006F08DF /* ImageCell.swift */,
+				C13662DC23DA8034003BC27D /* FavImageCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				C18EB97123D8EA77006F08DF /* ImageCell.swift in Sources */,
 				C110453623DA7955000A4304 /* FileManager+Extensions.swift in Sources */,
 				C110453423DA7933000A4304 /* PersistenceHelper.swift in Sources */,
+				C13662DD23DA8034003BC27D /* FavImageCell.swift in Sources */,
 				C18EB96423D7AA1F006F08DF /* DetailViewController.swift in Sources */,
 				C18EB96023D7A8FA006F08DF /* SecretAPI.swift in Sources */,
 				C18EB96F23D7EAAA006F08DF /* PixaBayModel.swift in Sources */,
