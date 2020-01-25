@@ -16,11 +16,12 @@ enum DataPersistenceError: Error {
     case deletingError(Error)
 }
 
-class PerssistenceHelper {
+class PersistenceHelper {
+    
     private static var images = [Hit]()
     private static let filename = "images.plist"
     
-    private static func save() throws {
+    private static func saveFavoriteImages() throws {
         let url = FileManager.pathToDocumentsDirectory(with: filename)
         do {
             let data = try PropertyListEncoder().encode(images)
@@ -30,10 +31,10 @@ class PerssistenceHelper {
         }
     }
     
-    static func save(image: Hit) throws {
+    static func createFavoriteImage(image: Hit) throws {
         images.append(image)
         do {
-            try save()
+            try saveFavoriteImages()
         } catch {
             throw DataPersistenceError.savingError(error)
         }
@@ -60,7 +61,15 @@ class PerssistenceHelper {
     static func delete(image atIndex: Int) throws {
         images.remove(at: atIndex)
         do {
-            try save()
+            try saveFavoriteImages()
+        } catch {
+            throw DataPersistenceError.deletingError(error)
+        }
+    }
+    static func delete(event atIndex: Int) throws {
+        images.remove(at: atIndex)
+        do {
+            try saveFavoriteImages()
         } catch {
             throw DataPersistenceError.deletingError(error)
         }

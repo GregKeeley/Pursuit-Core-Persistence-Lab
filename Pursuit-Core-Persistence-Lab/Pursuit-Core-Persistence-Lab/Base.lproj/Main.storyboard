@@ -149,6 +149,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-qN-DoN">
                                 <rect key="frame" x="339" y="408" width="55" height="30"/>
                                 <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="favoriteButtonPressed:" destination="rw0-A8-CY8" eventType="touchUpInside" id="Uay-SQ-cRO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5l-Sc-4g3">
                                 <rect key="frame" x="20" y="495" width="374" height="20.5"/>
@@ -182,8 +185,10 @@
                     <navigationItem key="navigationItem" id="BUC-Gm-4qe"/>
                     <connections>
                         <outlet property="TagsLabel" destination="n5l-Sc-4g3" id="xOK-dR-Heb"/>
+                        <outlet property="favoriteButton" destination="ZWz-qN-DoN" id="1jJ-Ey-OGn"/>
                         <outlet property="imageView" destination="OTa-HJ-iKM" id="Ced-UI-JUd"/>
                         <outlet property="likesLabel" destination="EP7-sQ-aLc" id="lgz-c1-EqS"/>
+                        <outlet property="tagsLabel" destination="n5l-Sc-4g3" id="G0j-05-6ye"/>
                         <outlet property="userIDLabel" destination="mfv-PF-bqy" id="1tD-ma-GsS"/>
                     </connections>
                 </viewController>
