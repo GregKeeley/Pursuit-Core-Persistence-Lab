@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var userIDLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     public var imageData: Hit?
     
@@ -25,6 +25,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        setFavoriteStatus()
+        print(favoriteImages.count)
     }
     
     
@@ -46,11 +48,22 @@ class DetailViewController: UIViewController {
         likesLabel.text = ("Likes: \(imageData?.likes.description ?? "N/A")")
         tagsLabel.text = ("Tags: \(imageData?.tags ?? "N/A")")
     }
+    private func setFavoriteStatus() {
+        if favoriteImages.contains(imageData!) {
+        favoriteButton.image = UIImage(systemName: "heart.fill")
+        favoriteButton.tintColor = .red
+        } else {
+            favoriteButton.image = UIImage(systemName: "heart")
+            favoriteButton.tintColor = .black
+        }
+    }
     private func writeToFavorites(image: Hit) {
         favoriteImages.append(image)
-        try? dataPersistence
+        try? dataPersistence.createFavoriteImage(image: image)
+        
     }
-    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+    @IBAction func favoriteButtonPressed(_ sender: UIBarButtonItem) {
+        setFavoriteStatus()
+        writeToFavorites(image: imageData!)
     }
-    
 }

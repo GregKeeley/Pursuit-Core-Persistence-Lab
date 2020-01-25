@@ -31,10 +31,10 @@ class PersistenceHelper {
         }
     }
     
-    static func createFavoriteImage(image: Hit) throws {
-        images.append(image)
+    public func createFavoriteImage(image: Hit) throws {
+        PersistenceHelper.images.append(image)
         do {
-            try saveFavoriteImages()
+            try PersistenceHelper.saveFavoriteImages()
         } catch {
             throw DataPersistenceError.savingError(error)
         }
@@ -55,21 +55,13 @@ class PersistenceHelper {
         } else {
             throw DataPersistenceError.fileDoesNotExist(filename)
         }
-           return(images)
+           return images
         }
     
     static func delete(image atIndex: Int) throws {
-        images.remove(at: atIndex)
+        PersistenceHelper.images.remove(at: atIndex)
         do {
-            try saveFavoriteImages()
-        } catch {
-            throw DataPersistenceError.deletingError(error)
-        }
-    }
-    static func delete(event atIndex: Int) throws {
-        images.remove(at: atIndex)
-        do {
-            try saveFavoriteImages()
+            try PersistenceHelper.saveFavoriteImages()
         } catch {
             throw DataPersistenceError.deletingError(error)
         }

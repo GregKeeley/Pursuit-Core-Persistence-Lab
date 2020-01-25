@@ -6,7 +6,7 @@
 //  Copyright © 2020 Gregory Keeley. All rights reserved.
 //
 
-import UIKit
+import UIKit 
 
 class FavTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!

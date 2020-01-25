@@ -14,7 +14,7 @@ struct PixaBayImage: Codable {
     let total: Int
 }
 
-struct Hit: Codable {
+struct Hit: Codable, Equatable {
     let largeImageURL: String
     let webformatHeight: Int
     let webformatWidth: Int

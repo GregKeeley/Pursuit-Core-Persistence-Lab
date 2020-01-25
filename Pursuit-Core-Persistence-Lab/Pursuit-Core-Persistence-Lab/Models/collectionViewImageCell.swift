@@ -9,7 +9,7 @@
 import UIKit
 import ImageKit
 
-class ImageCell: UICollectionViewCell {
+class collectionViewImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!

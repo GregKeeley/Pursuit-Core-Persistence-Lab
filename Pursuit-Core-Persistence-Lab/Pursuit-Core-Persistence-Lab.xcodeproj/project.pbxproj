@@ -22,7 +22,7 @@
 		C18EB96923D7E9C5006F08DF /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C18EB96823D7E9C5006F08DF /* ImageKit */; };
 		C18EB96C23D7EA0F006F08DF /* PixaBayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96B23D7EA0F006F08DF /* PixaBayAPI.swift */; };
 		C18EB96F23D7EAAA006F08DF /* PixaBayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */; };
-		C18EB97123D8EA77006F08DF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB97023D8EA77006F08DF /* ImageCell.swift */; };
+		C18EB97123D8EA77006F08DF /* collectionViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EB97023D8EA77006F08DF /* collectionViewImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		C18EB96523D7AA40006F08DF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		C18EB96B23D7EA0F006F08DF /* PixaBayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBayAPI.swift; sourceTree = "<group>"; };
 		C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBayModel.swift; sourceTree = "<group>"; };
-		C18EB97023D8EA77006F08DF /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		C18EB97023D8EA77006F08DF /* collectionViewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				C18EB96E23D7EAAA006F08DF /* PixaBayModel.swift */,
-				C18EB97023D8EA77006F08DF /* ImageCell.swift */,
+				C18EB97023D8EA77006F08DF /* collectionViewImageCell.swift */,
 				C13662DC23DA8034003BC27D /* FavImageCell.swift */,
 			);
 			path = Models;
@@ -223,7 +223,7 @@
 			files = (
 				C18EB94F23D7A89F006F08DF /* ViewController.swift in Sources */,
 				C18EB94B23D7A89F006F08DF /* AppDelegate.swift in Sources */,
-				C18EB97123D8EA77006F08DF /* ImageCell.swift in Sources */,
+				C18EB97123D8EA77006F08DF /* collectionViewImageCell.swift in Sources */,
 				C110453623DA7955000A4304 /* FileManager+Extensions.swift in Sources */,
 				C110453423DA7933000A4304 /* PersistenceHelper.swift in Sources */,
 				C13662DD23DA8034003BC27D /* FavImageCell.swift in Sources */,
